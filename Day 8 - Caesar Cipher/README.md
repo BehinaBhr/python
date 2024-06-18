@@ -20,7 +20,8 @@ then decrypt it.
 
 - Solution URL: [Step 1](https://replit.com/@appbrewery/caesar-cipher-1-end), [Step 2](https://replit.com/@appbrewery/caesar-cipher-2-end),
 [Step 3](https://replit.com/@appbrewery/caesar-cipher-3-end),
-[Step 4](https://replit.com/@appbrewery/caesar-cipher-4-end).
+[Step 4](https://replit.com/@appbrewery/caesar-cipher-4-end),
+[Final](https://replit.com/@appbrewery/caesar-cipher-completed).
 
 ## Notes
 
