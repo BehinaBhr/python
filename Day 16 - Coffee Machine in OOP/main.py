@@ -1,23 +1,32 @@
-from menu import Menu
+from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
+# TODO: print report
+# TODO: check resources sufficient
+# TODO: process coin
+# TODO: Check transaction successful
+# TODO: make coffee
 
-money_machine = MoneyMachine()
+# object = Class()
+# object.attribute =
+# object.method(..,..)
+
 coffee_maker = CoffeeMaker()
+money_machine = MoneyMachine()
 menu = Menu()
 
-is_on = True
-
-while is_on:
+start = True
+while start:
     options = menu.get_items()
-    choice = input(f"What would you like? ({options}): ")
-    if choice == "off":
-        is_on = False
-    elif choice == "report":
+    order_ask = input(f"What would you like? ({options}) ")
+    if order_ask == "off":
+        start = False
+    elif order_ask == "report":
         coffee_maker.report()
         money_machine.report()
     else:
-        drink = menu.find_drink(choice)
-        
-        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
-          coffee_maker.make_coffee(drink)
+        order_info = menu.find_drink(order_ask)
+        if coffee_maker.is_resource_sufficient(order_info):
+            order_cost = order_info.cost
+            if money_machine.make_payment(order_cost):
+                coffee_maker.make_coffee(order_info)
